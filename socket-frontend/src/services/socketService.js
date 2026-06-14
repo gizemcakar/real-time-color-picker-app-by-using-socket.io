@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client';
 
-export default class SocketService {
+class SocketService {
   constructor() {
     this.socket = null;
     this.isConnected = false;
@@ -81,3 +81,7 @@ export default class SocketService {
     return this.socket;
   }
 }
+
+const socketService = new SocketService();
+
+export default socketService;
